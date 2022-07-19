@@ -113,3 +113,5 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 The best regressor model is the one with the Length3 and Weight variables as its two regressors. The second best regressor model is the one with Weight alone as the regressor variable. 
 
 ## Final Summary Statements
+
+For the weight prediction of each fish species (Perch, Pike, and Roach), we found that the Adjusted R-squared values are different but close in value in the very best regression model. For the weight prediction of the Perch species, the Adjusted R-squared value for the best regression model is around 0.9400. Then, for the weight prediction of the Pike species, the Adjusted R-squared value for the best regression model is around 0.980. While, the weight prediction of the Roach species, the Adjusted R-squared value for the best regression model is around 0.850. 
