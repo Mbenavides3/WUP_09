@@ -18,14 +18,40 @@ require(tigerstats)
 require(tidyverse)
 ```
 
+```{r}
+fishdata<-read.csv(file = "Fish.csv")
+```
+
 # Predicting Fish Weight
 
 
 ## Perch
 
+```{r}
+FishPerch<-filter(fishdata, Species == "Perch")
+FishPerch<-select(FishPerch, -Species)
+```
+
 ### Best Models
 
+```{r}
+library(leaps)
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = FishPerch,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
 ### Best Two regressor model
+
 
 
 ## Pike
