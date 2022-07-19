@@ -110,4 +110,6 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 
 ### Best Two regressor model
 
+The best regressor model is the one with the Length3 and Weight variables as its two regressors. The second best regressor model is the one with Weight alone as the regressor variable. 
+
 ## Final Summary Statements
