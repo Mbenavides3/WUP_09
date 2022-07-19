@@ -85,6 +85,11 @@ The best regressor model is the one with the Length1, Length2, Length3, Height, 
 
 ## Roach
 
+```{r}
+FishRoach<-filter(fishdata, Species == "Roach")
+FishRoach<-select(FishRoach, -Species)
+```
+
 ### Best Models
 
 ### Best Two regressor model
